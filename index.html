@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO APP</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=general-sans@500,300,600,401,400&f[]=satoshi@900,700,500,301,300,400&f[]=clash-display@400,500,300&f[]=stardom@400&f[]=poppins@400,600&f[]=pencerio@50&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="select-none overflow-X-hidden box-content bg-yellow-50">
+    <!-- headline  -->
+
+    <h1 class="bg-orange-200 text-center my-10 text-xl italic">
+      Welcome to the all new <span class="italic">TODO Application</span>
+    </h1>
+    <!-- add new task button  -->
+    <div
+      id="add"
+      class="add mx-[120px] bg-orange-600 w-[150px] md:mx-10 text-center p-2 rounded-[15px] text-white tracking-wider cursor-pointer hover:bg-orange-500 transition font-bold flex items-center justify-center gap-2"
+      >New Task
+      <img
+        width="20"
+        height="20"
+        src="https://img.icons8.com/material-outlined/24/FFFFFF/plus--v1.png"
+        alt="plus--v1"
+    /></div>
+
+    <!-- functionality -->
+    <div class="w-10 m-2 absolute right-0 top-[14%] cursor-pointer"
+      ><img
+        id="open"
+        width="30"
+        height="30"
+        src="https://img.icons8.com/ios/50/menu--v1.png"
+        alt="menu--v1"
+    /></div>
+
+    <div
+      id="menu"
+      class="bg-red-100 h-[95vh] absolute w-[100%] top-0 transition translate-y-[-100%]"
+      ><ul class="flex flex-col items-start my-20 gap-2 m-10 list-disc">
+        <li class="underline font-bold list-none">How to handle</li>
+        <li>Delete: Double click on the delete icon to delete the task</li>
+        <li
+          >Mark as done: click on the text of the task to make it look, the task has been
+          completed</li
+        >
+        <li class="absolute bottom-20 left-[45%] list-none cursor-pointer"
+          ><img
+            id="close"
+            width="30"
+            height="30"
+            src="https://img.icons8.com/ios/50/delete-sign--v1.png"
+            alt="delete-sign--v1"
+        /></li> </ul
+    ></div>
+
+    <!-- add new note button  -->
+    <div
+      id="addNote"
+      class="bg-green-100 p-5 sm:w-[300px] sm:h-[auto] md:w-[400px] mx-10 my-10 flex flex-col gap-1 font-bold hidden"
+    >
+      <div class="font-bold"
+        >Date: &nbsp &nbsp <input type="date" class="cursor-pointer" name="" id="date"
+      /></div>
+      <div>Task:</div>
+      <div class="font-bold"></div>
+      &nbsp &nbsp
+      <textarea
+        class="p-2"
+        name=""
+        id="task"
+        cols="30"
+        rows="10"
+        placeholder="Enter your task here"
+      ></textarea>
+
+      <div
+        id="addTask"
+        class="bg-green-300 w-[100px] text-center cursor-pointer mt-2 text-black rounded active:bg-white active:text-green-900 transition p-2"
+        >Add Task</div
+      >
+    </div>
+
+    <!-- main note -->
+    <div id="main" class="flex flex-wrap"> </div>
+    <script src="app.js"></script>
+  </body>
+</html>

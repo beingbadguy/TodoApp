@@ -1,0 +1,22 @@
+/* * {
+  font-family: 'General Sans', sans-serif;
+  font-family: 'Satoshi', sans-serif;
+  font-family: 'Clash Display', sans-serif;
+  font-family: 'Stardom', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Pencerio', cursive;
+  border: 1px solid red;
+} */
+
+* {
+  font-family: 'General Sans', sans-serif;
+}
+h1 {
+  font-family: 'Clash Display', sans-serif;
+}
+.add {
+  font-family: 'General Sans', sans-serif;
+}
+#add:active {
+  background-color: red;
+}
