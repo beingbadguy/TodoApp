@@ -113,7 +113,7 @@ addTask.addEventListener('click', () => {
 
     const newDiv = document.createElement('div');
     newDiv.innerHTML += `
-      <div class="supermain mx-10 my-10 flex">
+      <div class="mainCont mx-10 my-10 flex">
         <div
           class="${bgColor[randomColor]} h-auto min-w-[300px] max-w-[400px] rounded cursor-pointer p-4  flex flex-col gap-4"
         >
@@ -134,8 +134,7 @@ addTask.addEventListener('click', () => {
     main.appendChild(newDiv);
 
     let done = document.querySelectorAll('.done');
-    let fill = document.querySelectorAll('.fill');
-    let supermain = document.querySelectorAll('.supermain');
+    let heyMain = document.querySelector('.mainCont');
 
     done.forEach((tick) => {
       tick.addEventListener('click', () => {
@@ -146,16 +145,16 @@ addTask.addEventListener('click', () => {
     let deleted = document.querySelectorAll('.delete');
     deleted.forEach((del) => {
       del.addEventListener('click', () => {
-        supermain.forEach((item) => {
-          item.addEventListener('dblclick', () => {
-            item.remove();
-          });
-        });
+        let supermain = del.closest('.mainCont');
+        supermain.remove();
+        if (main.contains(heyMain) == false) {
+          notask.classList.remove('hidden');
+          notask.classList.add('block');
+        }
       });
     });
   }
-  console.log(NewTaskDate.value);
-  console.log(NewTaskValue.value);
+
   NewTaskValue.value = '';
   NewTaskDate.value = '';
 });
